@@ -1,0 +1,390 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: BaseFont;
+    src: url(../assets/fonts/VT323/VT323-Regular.ttf);
+}
+
+body {
+    height: 100%;
+    background-color: black;
+}
+
+.macintosh-monitor {
+    background-color: #262626;
+    /* Beige color for the monitor frame */
+    width: 80%;
+    /* Adjust the width as needed */
+    max-width: 700px;
+    /* Add a max-width to limit the size of the monitor */
+    height: 70vh;
+    /* Adjust the aspect ratio as needed */
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    border: 90px solid hsl(66, 100%, 98%);
+    ;
+    /* Gray color for the monitor border */
+    /* Rounded corners for the monitor frame */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Shadow for the monitor frame */
+}
+
+
+/* Style the Macintosh screen (content area) inside the monitor */
+.screen {
+    background-image: url(../assets/images/download.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+    cursor: url('../assets/images/cursor-png-1128small.png'), pointer;
+    position: absolute;
+    color: black;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fffed6;
+    border-radius: 20px;
+    overflow: auto;
+    padding: 20px;
+    font-family: BaseFont;
+
+}
+
+
+/* Style the blinking light */
+.blinking-light {
+    width: 20px;
+    /* Adjust the light's width as needed */
+    height: 10px;
+    /* Adjust the light's height as needed */
+    position: absolute;
+    top: 108%;
+    right: 50px;
+    /* Adjust the distance from the right side */
+    transform: translateY(-50%);
+    animation: blink 1s infinite;
+    background-color: #185b0c;
+    /* Blinking animation */
+}
+
+@keyframes blink {
+
+    0%,
+    20%,
+    90%,
+    100% {
+        background-color: #39ff14;
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    80% {
+        background-color: #185b0c;
+    }
+}
+
+
+.monitor-logo {
+    position: absolute;
+    top: 106%;
+    left: 0px;
+    font-size: 20px;
+    font-family: calibri;
+    font-weight: 700;
+    color: #a4a388;
+    cursor: default;
+    user-select: none;
+}
+
+.monitor-power-button {
+    background-color: #fffed6;
+    user-select: none;
+    border: 1px solid #a4a387;
+    width: 40px;
+    /* Adjust the light's width as needed */
+    height: 25px;
+    /* Adjust the light's height as needed */
+    position: absolute;
+    top: 105%;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.monitor-power-button img {
+    height: 20px;
+    width: 20px;
+}
+
+
+.screen::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.27861;
+    }
+
+    5% {
+        opacity: 0.34769;
+    }
+
+    10% {
+        opacity: 0.23604;
+    }
+
+    15% {
+        opacity: 0.90626;
+    }
+
+    20% {
+        opacity: 0.18128;
+    }
+
+    25% {
+        opacity: 0.83891;
+    }
+
+    30% {
+        opacity: 0.65583;
+    }
+
+    35% {
+        opacity: 0.67807;
+    }
+
+    40% {
+        opacity: 0.26559;
+    }
+
+    45% {
+        opacity: 0.84693;
+    }
+
+    50% {
+        opacity: 0.96019;
+    }
+
+    55% {
+        opacity: 0.08594;
+    }
+
+    60% {
+        opacity: 0.20313;
+    }
+
+    65% {
+        opacity: 0.71988;
+    }
+
+    70% {
+        opacity: 0.53455;
+    }
+
+    75% {
+        opacity: 0.37288;
+    }
+
+    80% {
+        opacity: 0.71428;
+    }
+
+    85% {
+        opacity: 0.70419;
+    }
+
+    90% {
+        opacity: 0.7003;
+    }
+
+    95% {
+        opacity: 0.36108;
+    }
+
+    100% {
+        opacity: 0.24387;
+    }
+}
+
+.screen::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(18, 16, 16, 0.1);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+.screen-menu {
+    font-size: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.screen-menu-list-item {
+    padding: 10px;
+    width: 100px;
+}
+.screen-menu-list-item a{
+    text-decoration: none;
+    color: black;
+    cursor: url('../assets/images/cursor-png-1111small.png'), pointer;
+}
+
+.screen-menu-list-item:hover {
+    background-color: #185b0c77;
+}
+
+
+/* Monitor Power Off */
+#power-off {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    color: black;
+    top: 0px;
+    z-index: 10;
+    left:0px;
+    right: 20px;
+    bottom: 0px;
+    display: none;
+    animation-name: fadeOut;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+}
+@keyframes fadeOut {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.screen-tabs{
+    animation: fadeIn 0.6s ease;
+    user-select: text;
+    display: none;
+    cursor: url('../assets/images/cursor-png-1128small.png'), pointer;
+    position: absolute;
+    color: black;
+    top: 20px;
+    left: 0px;
+    right: 20px;
+    bottom: 20px;
+    padding: 20px 0px 20px 20px;
+    font-family: BaseFont;
+    font-size: 25px;
+}
+.navigation-bar{
+    background-color: rgb(47, 47, 47);
+    position: sticky;
+    top:-22px;
+    width: 100%;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    margin-top: -25px;
+    justify-content: space-between;
+}
+.navigation-bar div{
+    padding: 5px;
+}
+.navigation-right-side{
+    cursor: url('../assets/images/cursor-png-1111small.png'), pointer;
+}
+.navigation-right-side:hover{
+    color: red;
+}
+
+.terminal-body{
+    background-color: black;
+    color: #39ff14;
+    padding: 10px;
+    height: auto;
+    min-height: 380px;
+    font-size: 20px;
+    outline: 0px;
+    overflow: auto;
+    height: 100%;
+}
+
+.readme-body{
+    background-color: white;
+    padding: 10px;
+    font-size: 22px;
+    overflow: auto;
+    height: 100%;
+}
+
+.wallpaper-body{
+    padding: 10px;
+    gap: 10px;
+    background-color: white;
+    justify-content: start;
+    align-items: center;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 100%;
+}
+.wallpaper-body img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+#no-support{
+    display: none;
+}
+/* for non Suppoerted devices */
+@media screen and (max-width: 888px) {
+    #no-support{
+        display: block;
+        height: 100vh;
+        width: 100%;
+        color: white;
+        font-family: baseFont;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .macintosh-monitor{
+        display: none;
+    }
+}

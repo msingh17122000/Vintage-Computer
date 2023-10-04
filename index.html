@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet"href="./css/main.css">
+</head>
+<body>
+    <div id="no-support">This page is not supported on your device</div>
+    <br>
+    <div class="macintosh-monitor">
+                    <!-- Activated when screen is turned off -->
+                    <div id="power-off"style="display:none"></div>
+                    
+        <div class="screen"id="screen">
+            <div id="readme-window"class='screen-tabs'>
+                <div class="navigation-bar"style='background-color:#3B77BC'>
+                    <div class="navigation-left-side">ReadMe</div>
+                    <div class="navigation-right-side"onclick='closeReadmeWindow()'>Close</div>
+                </div>
+                <div class="readme-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloremque laudantium omnis pariatur itaque! Delectus veniam illo dolorum temporibus cum adipisci id a obcaecati! Ad ab iste provident sint repellat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloremque laudantium omnis pariatur itaque! Delectus veniam illo dolorum temporibus cum adipisci id a obcaecati! Ad ab iste provident sint repellat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloremque laudantium omnis pariatur itaque! Delectus veniam illo dolorum temporibus cum adipisci id a obcaecati! Ad ab iste provident sint repellat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloremque laudantium omnis pariatur itaque! Delectus veniam illo dolorum temporibus cum adipisci id a obcaecati! Ad ab iste provident sint repellat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloremque laudantium omnis pariatur itaque! Delectus veniam illo dolorum temporibus cum adipisci id a obcaecati! Ad ab iste provident sint repellat.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloremque laudantium omnis pariatur itaque! Delectus veniam illo dolorum temporibus cum adipisci id a obcaecati! Ad ab iste provident sint repellat.
+                </div>
+            </div>
+
+            <div id="wallpaper-window"class='screen-tabs'>
+                <div class="navigation-bar"style='background-color:#3B77BC'>
+                    <div class="navigation-left-side">Change Wallpaper</div>
+                    <div class="navigation-right-side"onclick='closeWallpaperWindow()'>Close</div>
+                </div>
+                <div class="wallpaper-body">
+                    <img src="./assets/images/690eefe3ba1f553e0ea527f51ee407b604b681b4.jpg"onclick="changeWallpaper(this)">
+                    <img src="./assets/images/old-mac-cx9cc48o9jvkxky9.jpg"onclick="changeWallpaper(this)">
+                    <img src="./assets/images/Autumn-1366x768.webp"onclick="changeWallpaper(this)">
+                    <img src="./assets/images/BS3NPd.webp"onclick="changeWallpaper(this)">
+                    <img src="./assets/images/HD-wallpaper-windows-vista-microsoft-xp.jpg"onclick="changeWallpaper(this)">
+                    <img src="./assets/images/10-10--thumb.jpg"onclick="changeWallpaper(this)">
+                    <img src="./assets/images/Horse.jpg"onclick="changeWallpaper(this)">
+                    <img src="./assets/images/download.png"onclick="changeWallpaper(this)">
+                </div>
+            </div>
+
+            <div id="terminal-window"class='screen-tabs'>
+                <div class="navigation-bar">
+                    <div class="navigation-left-side">Terminal</div>
+                    <div class="navigation-right-side"onclick='closeTerminalWindow()'>Close</div>
+                </div>
+                <div class="terminal-body"contenteditable="true"spellcheck="false">
+                   $ 
+                </div>
+            </div>
+            <div class="screen-menu">
+                 <div class="screen-menu-list-item"onclick='showTerminalWindow()'>Terminal</div>
+                 <div class="screen-menu-list-item"onclick='showWallpaperWindow()'>Background</div>
+                 <div class="screen-menu-list-item"onclick='showReadmeWindow()'>ReadMe</div>
+                 <div class="screen-menu-list-item"><a href="https://github.com/msingh17122000"target="_blank">Github</a> </div>
+            </div>
+        </div>
+        <div class="blinking-light"id="blinking-light"></div>
+        <div class="blinking-light-background"></div>
+        <div class="monitor-logo">Vintage</div>
+        <div class="monitor-power-button"onclick="togglePower()">
+            <img src="./assets/svgs/power-symbol-svgrepo-com.svg">
+        </div>
+        
+        
+        
+    </div>
+
+
+<script src="./js/main.js"></script>
+</body>
+</html>
